@@ -126,7 +126,7 @@ export class FacebookConnector implements IConnector {
             if (process.env.DEBUG) {
                 console.info("Raw Facebook payload (sourceEvent)", JSON.stringify(msg.sourceEvent, null, "  "))
             }
-            this.bot.sendMessage(msg.address.user.id, msg.sourceEvent, function (err: any, info: any) {
+            this.bot.sendMessage(msg.address, msg.sourceEvent, function (err: any, info: any) {
                 if (err) {
                     cb(new Error(err.message), null);
                 } else {
@@ -143,7 +143,7 @@ export class FacebookConnector implements IConnector {
             if (process.env.DEBUG) {
                 console.info("Raw Facebook payload", JSON.stringify(message, null, "  "))
             }
-            bot.sendMessage(msg.address.user.id, message, function (err: any, info: any) {
+            bot.sendMessage(msg.address, message, function (err: any, info: any) {
                 cb(err);
             });
         }, (err: any) => {
