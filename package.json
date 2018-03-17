@@ -11,7 +11,7 @@
   "dependencies": {
     "async": "^2.6.0",
     "botbuilder": "^3.13.1",
-    "messenger-bot": "^2.4.0"
+    "messenger-bot": "git+https://github.com/fmaker/messenger-bot.git#v2.4.0_page_token_cbk"
   },
   "devDependencies": {
     "@types/async": "^2.0.46",
